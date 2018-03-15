@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+	        margin: 0px;
+	        padding: 0px;
+	        font-family: "微软雅黑";
+        }
+        body{
+            min-width: 1280px;
+        }
+        .head{
+            background-color: #FFFFFF;
+            height: 56px;
+        }
+        .site-pic2{
+            margin-top: 0;
+            padding-bottom: 0;
+            width: 50px;
+            float: left;
+            margin-left: 60px;
+        }
+        .title{
+            float: left;
+	        font-size: 26px;
+            height: 56px;
+            margin-top: 0;
+            line-height: 56px;
+        }
+        .login{
+            float: right;
+	        position: relative;
+            margin-left: 30px;
+        }
+        .loginbottom{
+            position: absolute;
+	        top: 40px;
+	        left: 20px;
+	        width: 0px;
+	        border-top: 2px solid #EA6F6E;
+	        transition: width .2s ease-in-out;
+	        -webkit-transition: width .2s ease-in-out;
+        }
+        .login a{
+            color: #8e9197;
+	        text-decoration: none;
+	        font-size: 14px;
+	        height: 56px;
+	        line-height: 56px;
+	        margin: 0 30px 0 10px ;
+        }
+        .header .login a:hover~ .login-bottom{
+	        width: 55px;
+        }
+        .header .login .login-pic {
+	        width: 20px;
+	        vertical-align: middle;
+        }
+        .list{
+            float: right;
+            list-style: none;
+	        position: relative;
+        }
+        .list li{
+            float: left;
+	        width: 110px;
+	        height: 56px;
+	        font-size: 18px;
+	        text-align: center;
+        }
+        .list .list-bottom{
+            height: 52px;
+	        width: 110px;
+	        position: absolute;
+	        left: 0px;
+	        top: 52px;
+	        border-top: 4px solid #ea6f6e;
+	        transition: left .2s ease-in-out;
+	        -webkit-transition: left .2s ease-in-out;
+        }
+        .list a{
+	        color: #8e9197;
+	        text-decoration: none;
+	        height: 56px;
+	        width: 100%;
+	        line-height: 56px;
+        }
+        .head .list li:nth-child(1):hover~ .list-bottom{
+	        left: 0px;	
+        }
+        .head .list li:nth-child(2):hover~ .list-bottom{
+	        left: 110px;	
+        }
+        .head .list li:nth-child(3):hover~ .list-bottom{
+	        left: 220px;	
+        }
+        .head .list li:nth-child(4):hover~ .list-bottom{
+	        left: 330px;	
+        }
+        .head .list li:nth-child(5):hover~ .list-bottom{
+	        left: 440px;	
+        }
+        .form{
+            height: 690px;
+            background: url(./firstPart.jpg);
+            background-size: cover;
+            margin-left: 20px;
+            margin-right: 20px;
+        } 
+        .box{
+	        padding: 225px 0px 0px 113px;
+	        z-index: 999;
+        }
+        .form h1{
+	        font-size: 60px;
+            font-weight: 100;
+            color: #ffffff;
+        }
+        .form p{
+	        line-height: 30px;
+            padding: 10px;
+            color: #ffffff;
+            margin-top:15px;
+        }
+        .form a{
+	        display: inline-block;
+	        text-align: center;
+	        text-decoration: none;
+	        background-color: #e74f4d;
+	        height: 50px;
+	        line-height: 50px;
+	        width: 230px;
+	        font-size: 32px;
+	        color: #FFFFFF;
+	        padding: 10px 30px;
+	        letter-spacing: 3px;
+            margin: 10px;
+            margin-top: 40px;
+	        transition: all 0.2s ease-in;
+	        -webkit-transition: all 0.2s ease-in;
+        }
+        .secordpart{
+	        height: 250px;
+	        font-size: 0;
+        }
+        .sec-intro {
+	        width: 25%;
+	        height: 170px;
+	        display: inline-block;
+	        text-align: center;
+        }
+        .sec-intro img{
+	        display: block;
+	        margin: 40px auto;
+        }
+        .detail{
+	        text-align: center;
+	        font-size: 14px;
+	        color: #8d8d8d;
+	        width: 100%;
+	        height: 51px;
+	        border-right: 1px solid #8d8d8d;
+	        cursor: pointer;
+        }
+        .secordpart .sec-intro:last-child .detail{
+	        border: none;
+        }
+        .thirdpart{
+            height: 360px;
+	        background-color: #ededec;
+            text-align: center;
+        }
+        .thirdpart img{
+            margin: 50px;
+        }
+        .thirdpart p{
+	        color:#a1a1a1;
+	        font-size: 50px;
+        }
+        .fourthpart{
+            height: 300px;
+            background: url(./s/实现常见的技术产品官网的页面架构及样式布局_files/bgimage-1.jpg) no-repeat;
+            margin-left: 30px;
+            text-align: center;
+            padding-top: 60px;
+        }
+        .part1{
+	        cursor: pointer;
+	        font-size: 23px;
+	        padding: 15px 0 0 0;
+                margin-bottom: 10px;
+            color: #ffffff;
+        }
+        .fourthpart  span{
+	        color: #FFFFFF;
+	        display: inline-block;
+	        width: 30px;
+	        height: 20px;
+	        border-top: 2px solid #FFFFFF;
+        }
+        .part2{
+            font-size: 12px;
+            color: #ffffff;
+        } 
+        .fourthpart form{
+            margin-top: 50px;
+        }
+        .fourthpart select{
+	        color: rgb(204, 93, 111);
+	        width: 234px;
+	        height: 36px;
+	        padding-left: 5px;
+	        margin-left: 28px;
+        }
+        .fourthpart select option{
+	        height: 36px;;
+        }
+        .fourthpart input{
+	        width: 234px;
+	        height: 36px;
+	        margin-left: 28px;
+	        padding-left: 20px;
+	        background-color: #be4e48;
+	        color: #FFFFFF;
+	        font-size: 15px;
+	        font-weight: 700;
+	        letter-spacing: 20px;
+	        border: none;
+        }
+        .fifthpart{
+            background-color: #f7f7f7;
+            height: 400px;
+            margin: 0;
+        }
+        .fifthpart figure{
+            text-align: center;
+            width: 25%;
+            float: left;
+        }
+        .fifthpart figure:last-child{
+	        padding-left: px;
+        }
+        .sixthpart{
+            height: 566px;
+            padding-top: 20px;
+        }
+        .sixthpart .left{
+	        background: url(./sixPart-pic.jpg) no-repeat;
+	        height: 526px;
+            width: 860px;
+            text-align: center;
+            padding-top: 40px;
+            float: left;
+            position: relative;
+        }
+        .title2{
+	        font-size: 21px;
+            color: #FFFFFF;
+        }
+        .para-1{
+	        font-size: 47px;
+        }
+        .para-2{
+	        font-size: 160px;
+        }
+        .left .l-triangle{
+	        border-top: 18px solid transparent;
+	        border-bottom: 18px solid transparent;
+	        border-right: 30px solid #FFFFFF;
+	        position: absolute;
+	        right: 0;
+	        top: 50%;
+	        margin-top: -18px;
+        }
+        .right{
+	        overflow: hidden;
+	        height: 566px;
+	        text-align: center;
+	        width: 33.3%;
+	        float: right;
+        }
+        .sixthpart .right .art-1 header{
+        	font-size: 22px;
+        	padding-top: 157px;
+
+        }
+        .art-1 header span{
+        	color: #e74f4d;
+        }
+        .art-1 p{
+        	width: 292px;
+        	line-height: 25px;
+        	color: #aaaaa9;
+        	font-size: 14px;
+        	text-align: left;
+        	margin: 30px auto;
+        	padding-bottom: 30px;	
+        }
+        .right .lunbo a{
+        	padding: 10px 30px;
+        	text-decoration: none;
+        	color: #e74f4d;
+        	border: 1px solid #e74f4d;
+        	transition: all 0.2s ease-in;
+        	-webkit-transition: all .2s ease-in;
+        }
+        .right .lunbo a:hover{
+        	color: #FFFFFF;
+        	background-color: #E74F4D;
+        	border-color: #FFFFFF;	
+        }	
+        .radio img{
+        	margin-top: 40px;
+        	display: inline-block;
+        }
+        .seventhpart{
+        	height: 520px;
+        	font-size: 19px;
+        	color: #FFFFFF;
+        }
+        .left1{
+            background-color: red;
+            height: 520px;
+            width: 33%;
+            text-align: center;
+            opacity: 0.6;
+            padding-top: 0;
+            float: left;
+        }
+        .left1 p{
+            margin-top: 200px;
+        }
+        .detail a{
+            color: #ffffff;
+            text-decoration: none;
+            text-align: center;
+            border: 1px solid #ffffff;
+            padding: 10px 30px;
+            font-size: 20px;
+        }
+        .center{
+            float: left;
+            color: red;
+            padding-top: 0;
+            width: 30%;
+            height: 520px;
+            text-align: center;
+        }
+        .center p{
+            margin-top: 200px;
+        }
+        .detail1 a{
+            color:red;
+            text-decoration: none;
+            text-align: center;
+            border: 1px solid red;
+            padding: 10px 30px;
+            font-size: 20px;
+        }
+        .right1{
+            float: left;
+            width:37%;
+            height: 520px;
+        }
+        .right1 img{
+            height: 520px;
+        }
+        .eighthpart{
+            text-align: center;
+            height: 100px;
+        }
+        .eighthpart h2{
+            font-size: 19px;
+            margin-top: 100px;
+        }
+        .ninthpart{
+            display: table;
+            text-align: left;
+        }
+        .l-table-cell{
+	        width: 40%;
+	        display: table-cell;
+	        font-size: 14px;
+	        color: #bcbbba;
+	    }
+        .table-row{
+        	margin: 0 75px 50px 135px;
+        }
+        .table-row h3{
+        	font-size: 16px;
+        	margin-bottom: 20px;
+        	color: #807c7c;
+        }
+        .table-row a{
+        	float: right;
+        	text-decoration: none;
+        	color: #bcbbba;
+        }
+        .r-table-cell form{
+        	width: 100%;
+        }
+        .r-table-cell input{
+        	width: 41%;
+        	height: 50px;
+        	margin-bottom: 13px;
+        	margin-right: 17px;
+        	background-color: #ededee;
+        	border: none;
+        	padding-left: 10px;
+        	box-sizing: border-box;
+        }
+        .r-table-cell textarea{
+        	resize: none;
+        	padding: 10px 0 0 10px;
+        	width: 83.5%;
+        	background-color: #EDEDEe;
+        	height: 120px;
+        	border: none;
+        	margin-bottom: 13px;
+        }
+        .r-table-cell .submit{
+        	width: 85%;
+        	font-size: 18px;
+        	color: #000000;
+        }
+        .lastpart{
+            height: 360px;
+	        text-align: center;
+	        background-color: #32353e;
+	        padding-top: 86px;
+	        color: #FFFFFF;
+	        font-size: 25px;
+            position: relative;
+            margin-top: 50px;
+        }
+        .lastpart form input{
+        	margin-top: 40px;
+        	width: 30%;
+        	font-size: 18px;
+        	height: 50px;
+        	padding-left: 10px;
+        	margin-right: -7px;
+        	border: none;
+        }
+        .lastpart .submit{
+        	background-color: #6f7178;
+        	color: #FFFFFF;
+        	border: none;
+        	width: 100px;
+        	letter-spacing: 10px;
+        	margin-bottom: 50px;
+        }
+        .lastpart footer{
+        	background-color: #303039;
+        	height: 52px;
+        	width: 100%;
+        	position: absolute;
+        	bottom: 0;
+        	font-size: 14px;
+        }
+        .lastpart footer span{
+        	float: left;
+            padding: 20px 0 0 120px;
+            font-size: 16px;
+        }
+        .lastpart footer a{
+        	float: right;
+        	padding: 20px 50px 0 0;
+        	text-decoration: none;
+            color: #FFFFFF;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <header class="head">
+            <div class="title">
+                <img src="./s/实现常见的技术产品官网的页面架构及样式布局_files/site-pic.png" class="site-pic2">
+                <span>New Life</span> 
+            </div>
+            <div class="login">
+					<img class="login-pic" src="./s/实现常见的技术产品官网的页面架构及样式布局_files/login-icon.jpg"><a href="https://github.com/Psilocine/learngit/tree/master/ife">登录</a>
+					<div class="login-bottom">
+					</div>
+                </div>
+                <ul class="list">
+                        <li><a href="file:///C:/Users/xia%20dong%20ling/Desktop/%E7%BB%83%E4%B9%A0/7.html#">首页</a></li>
+                        <li><a href="file:///C:/Users/xia%20dong%20ling/Desktop/%E7%BB%83%E4%B9%A0/7.html#">最新活动</a></li>
+                        <li><a href="file:///C:/Users/xia%20dong%20ling/Desktop/%E7%BB%83%E4%B9%A0/7.html#">项目介绍</a></li>
+                        <li><a href="file:///C:/Users/xia%20dong%20ling/Desktop/%E7%BB%83%E4%B9%A0/7.html#">爱心社区</a></li>
+                        <li><a href="file:///C:/Users/xia%20dong%20ling/Desktop/%E7%BB%83%E4%B9%A0/7.html#">关于我们</a></li>
+                        <li class="list-bottom"></li>
+                    </ul>
+        </header>
+        <div class="firstpart">
+            <div class="form">
+                <div class="box">
+                    <h1>Time of new life</h1>
+                    <p>新时代 , 年轻的人们让我们一起<br>体验新生活 , 享受新生活</p>
+                    <a href="file:///C:/Users/xia%20dong%20ling/Desktop/%E7%BB%83%E4%B9%A0/7.html#">开始体验</a>
+                </div>
+            </div>
+        </div>
+        <div class="secordpart">
+            <figure class="sec-intro">
+            <img src="./s/实现常见的技术产品官网的页面架构及样式布局_files/icon-1.jpg">
+            <figcaption>
+                <div class="detail">
+                    打造全新世界观, 让你更<br> 爱你的生活
+                </div>
+            </figcaption>
+        </figure>
+        <figure class="sec-intro">
+            <img src="./s/实现常见的技术产品官网的页面架构及样式布局_files/icon-2.jpg">
+            <figcaption>
+                <div class="detail">
+                    丰富多彩的公益活动, 发<br>挥新世界的主人公意识
+                </div>
+            </figcaption>
+        </figure>
+        <figure class="sec-intro">
+            <img src="./s/实现常见的技术产品官网的页面架构及样式布局_files/icon-3.jpg">
+            <figcaption>
+                <div class="detail">
+                    欣赏的新理念, 超前体验<br>未知的生活
+                </div>
+            </figcaption>
+        </figure>
+        <figure class="sec-intro">
+            <img src="./s/实现常见的技术产品官网的页面架构及样式布局_files/icon-4.jpg">
+            <figcaption>
+                <div class="detail">
+                    完善的培养机制, 培养你<br>全新的世界观
+                </div>
+            </figcaption>
+        </figure>
+        </div>
+        <div class="thirdpart">
+                <img src="./s/实现常见的技术产品官网的页面架构及样式布局_files/site-pic2.png" class="pic">
+                <p>关于新世界，你不知道的还有多少？</p>
+        </div>
+        <div class="fourthpart">
+            <p class="part1">查找新世界城市活动信息</p>
+            <span></span>
+            <p class="part2">每个城市有不同的活动信息，请自主查询您所需要了解的城市</p>
+            <form action="https://psilocine.github.io/learngit/ife/xiaowei/task07/task07.html" method="post">
+                <label for="country"></label>
+                <select name="country" id="country">
+                    <option value="" disabled="" selected="">中国</option>
+                </select>
+                <label for="province"></label>
+                <select name="province" id="province">
+                    <option value="" disabled="" selected="">省份</option>
+                    <option value="fj">福建省</option>
+                    <option value="gd">广东省</option>
+                    <option value="sh">上海省</option>
+                    <option value="js">江苏省</option>
+                </select>
+                <label for="city"></label>
+                <select name="city" id="city">
+                    <option value="" disabled="" selected="">城市</option>
+                    <option value="">泉州市</option>
+                    <option value="">广州市</option>
+                    <option value="">东莞市</option>
+                    <option value="">东台市</option>
+                    <option value="">盐城市</option>
+                    <option value="">南京市</option>
+                </select>
+                <input class="submit" type="submit" value="搜索">
+            </form>
+        </div>
+        <div class="fifthpart">
+                <figure>
+						<img src="./s/实现常见的技术产品官网的页面架构及样式布局_files/activity1.jpg">
+						<figcaption>
+							<p class="pic-place">北京活动</p>
+							<p class="pic-title">新社区大联盟</p>
+						</figcaption>
+					</figure>
+					<figure>
+						<figcaption>
+							<p class="pic-place place-em">上海活动</p>
+							<p class="pic-title">夜上海新景观探索</p>
+						</figcaption>
+						<img src="./s/实现常见的技术产品官网的页面架构及样式布局_files/activity2.jpg">
+					</figure>
+					<figure>
+						<img src="./s/实现常见的技术产品官网的页面架构及样式布局_files/activity3.jpg">
+						<figcaption>
+							<p class="pic-place">深圳活动</p>
+							<p class="pic-title">全新海岸线观点站</p>
+						</figcaption>
+					</figure>
+					<figure>
+						<img src="./s/实现常见的技术产品官网的页面架构及样式布局_files/activity4.jpg">
+						<figcaption>
+							<p class="pic-place">香港活动</p>
+							<p class="pic-title">奢侈消费大派送</p>
+						</figcaption>
+					</figure>
+        </div>
+        <div class="sixthpart">
+            <div class="left">
+                <div class="title2">
+                    <p class="para-1">新世界</p>
+                    <p class="para-2">TIME</p>
+                    <p>@新世界 - 北京</p>
+                    <p>2017.03.17</p>
+                </div>
+                <div class="l-triangle"></div>
+            </div>
+            <div class="right">
+                <div class="lunbo">
+                    <article class="art-1">
+                        <header>新世界／<span>01</span></header>
+                        <p>新世界！新世界！新世界！新世界！新世界！新世界！新世界！新世界！新世界！新世界！新世界！新世界！新世界！新世界！新世界！新世界！新世界！新世界！</p>
+                    </article>
+                    <a href="https://psilocine.github.io/learngit/ife/xiaowei/task07/task07.html">更多详情</a>
+                    <div class="radio">
+                        <img src="./s/实现常见的技术产品官网的页面架构及样式布局_files/rd-c.gif">
+                        <img src="./s/实现常见的技术产品官网的页面架构及样式布局_files/rd.gif">
+                        <img src="./s/实现常见的技术产品官网的页面架构及样式布局_files/rd.gif">
+                    </div>
+                </div>
+            </div>  
+        </div>
+        <div class="seventhpart">
+            <div class="left1">
+                <div class="para">
+                    <p>新时代</p>
+                    <p style="margin:10px">关于爱生活的我们</p>
+                </div>
+                <span style="margin:10px"></span>
+                <div class="detail">
+                    <a href="https://psilocine.github.io/learngit/ife/xiaowei/task07/task07.html#">查看更多</a>	
+                </div>
+            </div>
+            <div class="center">
+                    <div class="para1">
+                            <p>新时代</p>
+                            <p style="margin:10px">关于爱生活的我们</p>
+                        </div>
+                        <span style="margin:10px"></span>
+                        <div class="detail1">
+                            <a href="https://psilocine.github.io/learngit/ife/xiaowei/task07/task07.html#">查看更多</a>	
+                        </div>
+            </div>
+            <div class="right1">
+                <img src="./sevenPart-pic.jpg">
+            </div>
+        </div>
+        <div class="eighthpart">
+            <h2>成为我们的志愿者</h2>
+            <p style="font-size:10px;color:#b7b7b7">新世界的大家庭需要每一个爱生活的人的加入，如果你够年轻，有梦想，有激情<br>那就不要犹豫，快来加入我们，成为改变所有人生活的人 </p>
+        </div>
+        <div class="ninthpart">
+            <div class="l-table-cell">
+                <div class="table-row">
+                    <h3>新世界志愿者协议</h3>
+                    <p>加入新世界志愿者的人员必须遵守中华人民共共和国的相关法律法规，并且本着平等资源的原则 ......</p>
+                    <a href="file:///C:/Users/xia%20dong%20ling/Desktop/%E7%BB%83%E4%B9%A0/7.html#">∨ more</a>
+                </div>
+                <div class="table-row">
+                    <h3>新世界志愿者权利</h3>
+                    <p>新世界志愿者享受新世界内部所有资源共享的权利，并且享受所在四新世界活动的优先参与资格</p>
+                    <a href="file:///C:/Users/xia%20dong%20ling/Desktop/%E7%BB%83%E4%B9%A0/7.html#">∨ more</a>
+                </div>
+                <div class="table-row">
+                    <h3>更多条款</h3>
+                    <a href="file:///C:/Users/xia%20dong%20ling/Desktop/%E7%BB%83%E4%B9%A0/7.html#">∨ more</a>
+                </div>
+            </div>
+            <div class="r-table-cell">
+                <form action="https://psilocine.github.io/learngit/ife/xiaowei/task07/task07.html" method="post">
+                    <input type="text" name="name" id="name" placeholder="姓名:">
+                    <input type="text" name="age" id="age" placeholder="年龄:">
+                    <br>
+                    <input type="tel" name="phone" id="phone" placeholder="联系方式:">
+                    <input type="text" name="addr" id="addr" placeholder="地址:">
+                    <textarea name="detail" placeholder="请简单描述您梦想的生活："></textarea>
+                    <input class="submit" type="submit" value="提交申请">
+                </form>
+            </div>
+        </div>
+        <div class="lastpart">
+            <p style="font-size:30px">联系我们</p>
+            <p style="font-size:15px">为了更好的获取我们最新的产品咨询，您可以留下您的电子邮箱快速订阅我们的产品咨询<br>也可以通过以下任何方式关注我们动态</p>
+            <form action="https://psilocine.github.io/learngit/ife/xiaowei/task07/task07.html#" method="post">
+                <input type="email" name="email" id="email" placeholder="someone@email.com">
+                <input class="submit" type="submit" value="提交">
+            </form>
+            <a href="https://psilocine.github.io/learngit/ife/xiaowei/task07/task07.html#"><img src="./s/实现常见的技术产品官网的页面架构及样式布局_files/qq.gif"></a>
+            <a href="https://psilocine.github.io/learngit/ife/xiaowei/task07/task07.html#"><img src="./s/实现常见的技术产品官网的页面架构及样式布局_files/weibo.gif"></a>
+            <a href="https://psilocine.github.io/learngit/ife/xiaowei/task07/task07.html#"><img src="./s/实现常见的技术产品官网的页面架构及样式布局_files/tuite.gif"></a>
+            <a href="https://psilocine.github.io/learngit/ife/xiaowei/task07/task07.html#"><img src="./s/实现常见的技术产品官网的页面架构及样式布局_files/global.gif"></a>
+            <footer>
+                <span>©2017新世界</span>
+                <a href="https://psilocine.github.io/learngit/ife/xiaowei/task07/task07.html#top">Back to top</a>
+            </footer>
+        </div>
+    </div>
+    
+</body>
+</html>

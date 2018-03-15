@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: "微软雅黑";
+        }
+        .head{
+            background-color: #2189bf;
+            height: 56px;
+            width: 100%;
+        }
+        .logo{
+            margin-left:80px;
+            padding-top: 10px;
+            float: left;
+        }
+        a{
+            text-decoration: none;
+        }
+        .search{
+            float:right;
+            margin-right: 60px;
+        }
+        .search input{
+            width: 278px;
+            height: 28px;
+            background:url("./s/任务九：使用HTML_CSS实现一个复杂页面_files/search.gif") 18px no-repeat;
+            background-color: #fff;
+            border-radius: 14px;
+            padding-left: 35px;
+            margin: 14px 18px 14px 0px;
+            border: none;
+            outline: none;
+        }
+        .search a{
+            background: url("./s/任务九：使用HTML_CSS实现一个复杂页面_files/login.png") 0px 3px no-repeat;
+            padding-left: 18px;
+            color: #fff;
+        }
+        .left{
+            background-color: #2a2e3d;
+            float: left;
+            width: 260px;
+            height: 1210px;
+            margin-left: 40px;
+        }
+        .head-logo{
+            width: 60px;
+            height: 60px;
+            margin-left: 40px;
+            margin-top: 20px;
+        }
+        .username{
+            color: #fff;
+            float: right;
+            font-size: 16px;
+            margin-top: 40px;
+            margin-right: 90px;
+        }
+        .info ul{
+            list-style: none;
+            height: 50px;
+        }
+        .info ul li:first-child{
+            border-right: 3px solid #313545;
+        }
+        .info ul li{
+            float: left;
+            width: 128px;
+            text-align: center;
+            color: rgb(140, 140, 143);
+        }
+        .files{
+            background-color:#383d4e;
+            color: #fff;
+            width: 260px;
+            height: 200px;
+        }
+        .file-pic{
+            margin-top: 10px;
+            margin-left: 40px;
+            float: left;
+        }
+        .one{
+            font-size: 12px;
+            float: left;
+            margin-top: 10px;
+            margin-left: 10px;
+        }
+        .file-pic2{
+            margin-top: 10px;
+            margin-left: 70px;
+            float: left;
+        }
+        .file-pic3{
+            float: left;
+            margin-top: 10px;
+        }
+        .two{
+            font-size: 12px;
+            float: left;
+            margin-top: 10px;
+            margin-left: 5px;
+            color: #6e8095;
+        }
+        .three{
+            color: #fff;
+            font-size: 12px;
+        }
+        .file-pic4{
+            margin-left: 90px;
+            float: left;
+        }
+        .four{
+            color: #6e8095;
+            font-size: 12px;
+        }
+        .file-pic5{
+            margin-top: 30px;
+            margin-left: 40px;
+            float: left;
+        }
+        .five{
+            font-size: 12px;
+            float: left;
+            margin-top: 30px;
+            margin-left: 20px;
+            color: #6e8095;
+        }
+        .right{
+            background-color: #c7c8ca;
+            width: 1000px;
+            height: 1210px;
+            float: left;
+        }
+        .top{
+            float: left;
+            background-color: white;
+            width: 100%;
+            height: 30px;
+            font-size: 12px;
+            color: #6e8095;
+            padding-top: 10px;
+        }
+        .top .toplist{
+            margin-left: 10px;
+            margin-top: 10px;
+        }
+        .firstpart{
+            float:left;
+            width: 890px;
+            height: 86px;
+            margin-left: 55px;
+            background-color: white;
+            margin-top: 20px;
+        }
+        .query{
+            margin-left: 40px;
+            margin-top: 20px;
+            font-size: 12px;
+            color: #6e8095;
+            float:left;
+        }
+        .searchbutton{
+            background-color:#2189bf;
+            width: 60px;
+            border: none;
+            height: 30px;
+            margin-top: 20px;
+            margin-left: 30px;
+        }
+        .secondpart{
+            float:left;
+            width: 930px;
+            height: 70px;
+            margin-left: 55px;
+            background-color: #c7c8ca;
+            margin-top: 20px;
+        }
+        .first{
+            float: left;
+            background-color: white;
+            height: 100%;
+            width: 30px;
+            text-align: center;
+            line-height: 70px;
+        }
+        .second{
+            margin-left: 5px;
+            float: left;
+            width: 100px;
+            height: 100%;
+            background-color: white;
+            text-align: center;
+        }
+        .second .time{
+            display: block;
+            margin-top: 15px;
+            font-size: 12px;
+        }
+        .money{
+            color: #6e8095;
+        }
+        .number{
+            color: #ef6502;
+            font-size: 20px;
+        }
+        .thrid{
+            background-color: white;
+            margin-left: 5px;
+            float: left;
+            width: 190px;
+            height: 100%;
+            text-align: center;
+            
+        }
+        .thrid span{
+            margin-top: 25px;
+            display: block;
+        }
+        .date{
+            font-size: 12px;
+            float: left;
+            margin-left: 60px;
+            margin-top: 20px;
+        }
+        .thirdpart{
+            float:left;
+            width: 930px;
+            height: 70px;
+            margin-left: 55px;
+        }
+        .colorone,.colortwo,.colorthree,.colorfour{
+            background-color: white;
+            
+            float: left;
+            width: 190px;
+            height: 100%;
+            font-size: 12px;
+            position: relative;
+        }
+        .colorone{
+            border-left: 4px #43b29f solid;
+            margin-left: 5px;
+        }
+        .data {
+            margin-left: 10px;
+            margin-top: 10px;
+        }
+        .data-part{
+            color:  #6e8095;
+            margin-left: 10px;
+            margin-top: 10px;
+        }
+        .colorone-part,.colorone-partone,.colorone-parttwo,.colorone-partthree{
+            float: right;
+            width: 60px;
+            height: 40px;
+            
+            position: absolute;
+            right: 15px;
+            top: 15px;
+        }
+        .colorone-part{
+            background-color: #43b29f;
+        }
+        .colortwo{
+            border-left: 4px #398ac1 solid;
+            margin-left: 35px;
+        }
+        .colorthree{
+            border-left: 4px #cf4b36 solid;
+            margin-left: 35px;
+        }
+        .colorfour{
+            border-left: 4px #e1cd46 solid;
+            margin-left: 35px;
+        }
+        .colorone-partone{
+            background-color: #398ac1;
+        }
+        .colorone-parttwo{
+            background-color: #cf4b36;
+        }
+        .colorone-partthree{
+            background-color: #e1cd46;
+        }
+        .fourthpart {
+            float:left;
+            margin-left: 55px;
+            margin-top: 20px;
+            font-size: 12px;
+        }
+        .leftpart{ float:left;}
+        .main-wrap{ padding: 10px 20px 20px; background-color: #fff; }
+        .fifthpart .leftpart .main-wrap{background: url(./2.png);}
+        .header{ padding: 10px 0 10px 20px; border-radius: 10px 10px 0 0; background-color: #f4f5f7; color: #c6c6c6; }
+        .project-header .item{ border-radius: 5px 5px 0 0; display: inline-block; width: 85px; height: 30px; line-height: 30px; text-align: center; background-color: #f4f5f7; }
+        .project-header .item.active{ border-radius: 5px 5px 0 0; border: 1px solid rgb(201, 199, 199); border-bottom: 0; background-color: #fff; position: relative; top: 1px; }
+        .project-main-content{ padding: 30px; border: 1px solid rgb(201, 199, 199); }
+        .project-main-content td{ width: 100px; height: 40px; line-height: 30px; border: 1px solid rgb(201, 199, 199); text-align: center; }
+        .rightpart{ float:left; margin-left:10px; width: 365px; height: 412px; }
+        .title{ height: 375px;  background-color:#ffffff;} 
+        .title p{ color:#c6c6c6;margin-left: 50px; line-height: 20px;}
+        .title span{ margin-left: 50px;}
+        .none{ height: 15px;}
+        .price{ margin-left: 30px;line-height: 20px;}
+        .leftprice p{ color: #c6c6c6; margin-left: 20px; margin-top: 5px;}
+        .leftprice{ float: left; height: 50px; border-top:1px solid #c6c6c6;border-bottom:1px solid #c6c6c6; border-right:1px solid #c6c6c6; float: left; width: 100px;} 
+        .leftprice span{ margin-left: 20px;}
+        .rightprice p{ color: #c6c6c6; margin-left: 20px; margin-top: 5px;}
+        .rightprice{ float: left; height: 50px; border-top:1px solid #c6c6c6;border-bottom:1px solid #c6c6c6;  float: left; width: 200px;} 
+        .rightprice span{ margin-left: 20px;}
+        .describe{
+            width: 200px;
+            height: 250px;
+        }
+        .line{ border-top: 1px solid #c6c6c6; width: 300px;margin-left: 30px;}
+        .check{ margin-left: 50px; color:#c6c6c6; }
+        .check,.sub{ float:left; line-height: 10px;margin-top: 10px;}
+        .check{margin-left: 0px;}
+        .sub{ margin-left: 150px;}
+        .submit{ background-color: #398cc2;border: 0; width: 50px;}
+        .fifthpart{
+            float:left;
+            margin-left: 55px;
+            margin-top: 20px;
+            font-size: 12px;
+        }
+        .fifthpart .leftpart{ width: 370px;}
+        .fifthpart .leftpart .main-wrap{height: 300px}
+        .calendar{ margin-left: 10px;}
+        .week{ border-top: 1px solid #a8cfec; border-bottom: 1px solid #e1e1e1; margin-top: 10px;}
+        .week td,.day td,.right-wrap td{width: 100px; height: 25px; text-align: center;}
+        .day{ margin-top: 10px;}
+        .fifthpart .rightpart{ width: 505px;}
+        .right-wrap{ padding: 10px 20px 28px; background-color: #fff; }
+        .right-wrap table{border-collapse: collapse;}
+        .right-wrap td,.right-wrap th{ border: 1px solid rgb(201, 199, 199); }
+        .right-wrap th{height: 30px;}
+        .right-wrap th:nth-child(3){ width: 300px; }
+        .col{ position: relative;  float: right; width: 150px; height: 5px; background-color: gray; margin-top: 4px; margin-right: 10px; }
+        .col .red{ width: 130px; position: absolute; top: 0; bottom: 0; left: 0; background-color: #ee6e51; }
+        .col .orange{ width: 120px; position: absolute; top: 0; bottom: 0; left: 0; background-color: #ef8150; }
+        .col .yellow{ width: 110px; position: absolute; top: 0; bottom: 0; left: 0; background-color: #f19e4e; }
+        .col .blue,.blueone,.bluetwo,.bluethree,.bluefour,.bluefive,.bluesix{ position: absolute; top: 0; bottom: 0; left: 0; background-color: #7fcbef; }
+        .col .blue{ width: 100px; }
+        .col .blueone{ width: 90px; }
+        .col .bluetwo{ width: 80px; }
+        .col .bluethree{ width: 70px; }
+        .col .bluefour{ width: 60px; }
+        .col .bluefive{ width: 50px; }
+        .col .bluesix{ width: 40px; }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="head">
+            <div class="logo">
+                <img src="./s/任务九：使用HTML_CSS实现一个复杂页面_files/logo.gif">
+            </div>
+            <div class="search">
+                <input type="text">
+                <a href="#">登录</a>
+            </div>
+        </div>
+        <div class="all">
+            <div class="left">
+                <div class="info">
+                    <div class="user">
+                        <img src="./s/任务九：使用HTML_CSS实现一个复杂页面_files/head-logo.gif" class="head-logo">
+                        <span class="username">ABC123</span>
+                    </div>
+                    <ul>
+                        <li><p>110</p><span>收藏</span></li>
+                        <li><p>313</p><span>粉丝</span></li>
+                    </ul>
+                </div>
+                <div class="files">
+                    <div style="height:30px">
+                        <img src="./s/任务九：使用HTML_CSS实现一个复杂页面_files/userTab.gif" class="file-pic">
+                        <span class="one">个人报表</span>
+                    </div>
+                    <div style="height:30px">
+                        <img src="./s/任务九：使用HTML_CSS实现一个复杂页面_files/arrow.gif" class="file-pic2">
+                        <img src="./s/任务九：使用HTML_CSS实现一个复杂页面_files/dir.gif" class="file-pic3">
+                        <span class="two">文件一</span>
+                    </div>
+                    <div style="height:30px;margin-top: 5px;">
+                            <img src="./s/任务九：使用HTML_CSS实现一个复杂页面_files/more.png" class="file-pic2" style="margin-right:3px;">
+                            <img src="./s/任务九：使用HTML_CSS实现一个复杂页面_files/dir-c.gif" class="file-pic3" style="margin-right:3px;margin-top: 5px;">
+                            <span class="three">文件二</span>
+                    </div>
+                    <div style="height:30px">
+                        <img src="./s/任务九：使用HTML_CSS实现一个复杂页面_files/file-c.gif" class="file-pic4">
+                        <span class="three">文档一</span>
+                    </div>
+                    <div style="height:30px">
+                        <img src="./s/任务九：使用HTML_CSS实现一个复杂页面_files/file.gif" class="file-pic4">
+                        <span class="four">文档二</span>
+                    </div>
+                    <div style="height:30px">
+                        <img src="./s/任务九：使用HTML_CSS实现一个复杂页面_files/arrow.gif" class="file-pic2">
+                        <img src="./s/任务九：使用HTML_CSS实现一个复杂页面_files/dir.gif" class="file-pic3">
+                        <span class="two">文件三</span>
+                    </div>
+                </div>
+                <div style="height:50px">
+                    <img src="./s/任务九：使用HTML_CSS实现一个复杂页面_files/star.gif" class="file-pic5">
+                    <span class="five">个人收藏</span>
+                </div>
+                <div style="height:50px">
+                    <img src="./s/任务九：使用HTML_CSS实现一个复杂页面_files/share.gif" class="file-pic5">
+                    <span class="five">我的分享</span>
+                </div>
+                <div style="height:50px">
+                    <img src="./s/任务九：使用HTML_CSS实现一个复杂页面_files/star.gif" class="file-pic5">
+                    <span class="five">图库</span>
+                </div>
+                <div style="height:50px">
+                    <img src="./s/任务九：使用HTML_CSS实现一个复杂页面_files/star.gif" class="file-pic5">
+                    <span class="five">成长记录</span>
+                </div>
+                <div style="height:50px">
+                    <img src="./s/任务九：使用HTML_CSS实现一个复杂页面_files/userMes.gif" class="file-pic5">
+                    <span class="five">账户信息</span>
+                </div>                           
+            </div>
+            <div class="right">
+                <div class="top">
+                    <span class="toplist">C站&nbsp;&nbsp;/&nbsp;&nbsp;个人报表&nbsp;&nbsp;/&nbsp;&nbsp;文件一&nbsp;&nbsp;/&nbsp;&nbsp;</span><span style="color:#2189bf">文档一</span>
+                </div>
+                <div class="firstpart">
+                    <div class="query">查询项
+                        <select name="select">
+                            <option value="value1">第一项</option>
+                            <option value="value1">第二项</option>
+                            <option value="value1">第三项</option>
+                            <option value="value1">第四项</option>
+                        </select>
+                    </div>
+                    <div class="query">
+                            <span>买方</span>
+                            <select name="select">
+                                <option class="value2" value="value2">小A</option>
+                                <option class="value2" value="value2">小B</option>
+                                <option class="value2" value="value2">小C</option>
+                                <option class="value2" value="value2">小D</option>
+                            </select><br>
+                            <span>卖方</span>
+                            <select name="select">
+                                    <option class="value2" value="value2">小C</option>
+                                    <option class="value2" value="value2">小A</option>
+                                    <option class="value2" value="value2">小B</option>
+                                    <option class="value2" value="value2">小D</option>
+                                </select>
+                    </div>
+                    <div class="query">
+                        <span>日期</span>&nbsp;<input type="text" value="2018-03-12">
+                        <br>
+                        <span>人数</span>
+                        <select name="select">
+                            <option class="value2" value="value2">10人</option>
+                            <option class="value2" value="value2">9人</option>
+                            <option class="value2" value="value2">8人</option>
+                            <option class="value2" value="value2">7人</option>
+                        </select>
+                    </div>
+                    <div class="query">
+                            <span>总耗时</span>
+                            <select name="select">
+                                <option class="value2" value="value2">8天</option>
+                                <option class="value2" value="value2">7天</option>
+                                <option class="value2" value="value2">6天</option>
+                                <option class="value2" value="value2">5天</option>
+                            </select><br>
+                            <span>成交项</span>
+                            <select name="select">
+                                <option class="value2" value="value2">10项</option>
+                                <option class="value2" value="value2">9项</option>
+                                <option class="value2" value="value2">8项</option>
+                                <option class="value2" value="value2">7项</option>
+                            </select>
+                    </div>
+                    <input type="submit" value="搜索" class="searchbutton">
+                </div>
+                <div class="secondpart">
+                    <div class="first">
+                        <
+                    </div>
+                    <div class="second">
+                        <span class="time">10:00 am</span>
+                        <p class="money">￥<span class="number">1200</span></p>
+                    </div>
+                    <div class="second">
+                            <span class="time">11:00 am</span>
+                            <p class="money">￥<span class="number">1300</span></p>
+                    </div>
+                    <div class="second">
+                            <span class="time">12:00 am</span>
+                            <p class="money">￥<span class="number">1200</span></p>
+                    </div>
+                    <div class="second">
+                        <span class="time">01:00 am</span>
+                        <p class="money">￥<span class="number">1400</span></p>
+                    </div>
+                    <div class="second">
+                        <span class="time">02:00 am</span>
+                        <p class="money">￥<span class="number">1500</span></p>
+                    </div>
+                    <div class="second">
+                            <span class="time">03:00 am</span>
+                            <p class="money">￥<span class="number">1800</span></p>
+                    </div>  
+                    <div class="first" style="margin-left:5px;">
+                        >
+                    </div>   
+                    <div class="thrid">
+                        <span>历史查询</span>
+                    </div>     
+                </div>
+                <p class="date">2016年4月份统计</p>
+                <div class="thirdpart">
+                    <div class="colorone">
+                        <p class="data">133311</p>
+                        <div class="colorone-part"></div>
+                        <p class="data-part">成交量</p>
+                    </div>
+                    <div class="colortwo">
+                        <p class="data">133311</p>
+                        <div class="colorone-partone"></div>
+                        <p class="data-part">成交量</p>
+                    </div>
+                    <div class="colorthree">
+                        <p class="data">133311</p>
+                        <div class="colorone-parttwo"></div>
+                        <p class="data-part">成交量</p>
+                    </div>
+                    <div class="colorfour">
+                        <p class="data">133311</p>
+                        <div class="colorone-partthree"></div>
+                        <p class="data-part">成交量</p>
+                    </div>
+                </div>
+                <div class="fourthpart">
+                    <div class="leftpart">
+                        <div class="header">第一组项目</div>
+                        <div class="main-wrap">
+                            <ul class="project-header">
+                                <li class="item active">项目一</li>
+                                <li class="item">项目一</li>
+                                <li class="item">项目一</li>
+                                <li class="item">项目一</li>
+                                <li class="item">项目一</li>
+                            </ul>
+                            <div class="project-main-content">
+                                <table cellspacing="0">
+                                    <tbody>
+                                        <tr>
+                                            <td>购买材料一</td>
+                                            <td>购买材料一</td>
+                                            <td>购买材料一</td>
+                                            <td>购买材料一</td>
+                                        </tr>
+                                        <tr>
+                                            <td>购买材料二</td>
+                                            <td>购买材料二</td>
+                                            <td>购买材料二</td>
+                                            <td>购买材料二</td>
+                                        </tr>
+                                        <tr>
+                                            <td>购买材料四</td>
+                                            <td>购买材料四</td>
+                                            <td>购买材料四</td>
+                                            <td>购买材料四</td>
+                                        </tr>
+                                        <tr>
+                                            <td>购买材料六</td>
+                                            <td>购买材料六</td>
+                                            <td>购买材料六</td>
+                                            <td>购买材料六</td>
+                                        </tr>
+                                        <tr>
+                                            <td>购买材料十三</td>
+                                            <td>购买材料十三</td>
+                                            <td>购买材料十三</td>
+                                            <td>购买材料十三</td>
+                                        </tr>
+                                        <tr>
+                                            <td>购买材料二十</td>
+                                            <td>购买材料二十</td>
+                                            <td>购买材料二十</td>
+                                            <td>购买材料二十</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rightpart">
+                        <div class="header">第一组项目</div>
+                        <div class="title">
+                            <div class="none"></div>
+                            <p>标题</p>
+                            <span>项目报表三</span>
+                            <div class="price">
+                                <div class="leftprice"><p>价格</p><span>￥158</span></div>
+                            </div>
+                            <div class="price">
+                                <div class="rightprice"><p>负责人</p><span>小A</span></div>
+                            </div>
+                            <div class="describe">
+                                <p>详细描述</p>
+                                <p style="color:black;">该项目目前负责人是......</p>
+                            </div>
+                            <div class="line">
+                            <div class="check">
+                                <input type="checkbox" class="checkbox">遵守保密协议
+                            </div>
+                            <div class="sub">
+                                <input type="submit" class="submit" value="搜索">
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="fifthpart">
+                    <div class="leftpart">
+                        <div class="header">日历</div>
+                        <div class="main-wrap">
+                            <select name="year" class="calendar">
+                                <option>2018年</option>
+                                <option>2017年</option>
+                                <option>2016年</option>
+                                <option>2015年</option>
+                            </select>
+                            <select name="month" class="calendar">
+                                <option>3月</option>
+                                <option>2月</option>
+                                <option>1月</option>
+                                <option>12月</option>
+                                <option>11月</option>
+                                <option>10月</option>
+                                <option>9月</option>
+                            </select>
+                            <select name="year" class="calendar">
+                                <option>标注日期</option>
+                            </select>
+                            <input type="button" class="calendar" style="width:70px;" value="返回今天">
+                            <div class="week">
+                                <table>
+                                    <tbody>
+                                        <tr><td>一</td><td>二</td><td>三</td><td>四</td><td>五</td><td>六</td><td>日</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="day">
+                                <table>
+                                    <tbody>
+                                        <tr><td></td><td></td><td></td><td>1<br>十四</td><td>2<br>元宵节</td><td>3<br>十六</td><td>4<br>十七</td></tr>
+                                        <tr><td>5<br>惊蛰</td><td>6<br>十九</td><td>7<br>二十</td><td>8<br>妇女节</td><td>9<br>廿二</td><td>10<br>廿三</td><td>11<br>廿四</td></tr>
+                                        <tr><td>12<br>植树节</td><td>13<br>廿六</td><td>14<br>廿七</td><td>15<br>廿八</td><td>16<br>廿九</td><td>17<br>二月</td><td>18<br>初二</td></tr>
+                                        <tr><td>19<br>初三</td><td>20<br>初四</td><td>21<br>春分</td><td>22<br>初六</td><td>23<br>初七</td><td>24<br>初八</td><td>25<br>初九</td></tr>
+                                        <tr><td>26<br>初十</td><td>27<br>十一</td><td>28<br>十二</td><td>29<br>十三</td><td>30<br>十四</td><td>31<br>十五</td><td></td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rightpart">
+                        <div class="header">汽车行业品牌榜</div>
+                        <div class="right-wrap">
+                            <table>
+                                <tbody>
+                                    <tr><th>排名</th><th>品牌</th><th>搜索指数</th></tr>
+                                    <tr><td>1</td><td>大众</td><td>48912001<span class="col"><span class="red"></span></span></td></tr>
+                                    <tr><td>2</td><td>丰田</td><td>29307333<span class="col"><span class="orange"></span></span></td></tr>
+                                    <tr><td>3</td><td>奥迪</td><td>23139070<span class="col"><span class="yellow"></span></span></td></tr>
+                                    <tr><td>4</td><td>本田</td><td>22885564<span class="col"><span class="blue"></span></span></td></tr>
+                                    <tr><td>5</td><td>福特</td><td>22324792<span class="col"><span class="blueone"></span></span></td></tr>
+                                    <tr><td>6</td><td>宝马</td><td>21444077<span class="col"><span class="bluetwo"></span></span></td></tr>
+                                    <tr><td>7</td><td>现代</td><td>20114969<span class="col"><span class="bluethree"></span></span></td></tr>
+                                    <tr><td>8</td><td>起亚</td><td>19251680<span class="col"><span class="bluefour"></span></span></td></tr>
+                                    <tr><td>9</td><td>奔驰</td><td>19172837<span class="col"><span class="bluefive"></span></span></td></tr>
+                                    <tr><td>10</td><td>别克</td><td>18544027<span class="col"><span class="bluesix"></span></span></td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

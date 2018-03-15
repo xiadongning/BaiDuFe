@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .mod{
+            border: 1px solid blue;margin: 20px;
+        }
+        .main{
+            position: relative;
+            border: 1px solid #000;width:400px;height: 200px;margin: 60px;
+            overflow: hidden;
+            margin: 0 auto;
+            top:50%;
+            margin-top: 200px;
+        }
+        .left-top{
+            position: absolute;border: 1px solid yellow;background:yellow;
+            display: block;width: 150px;height: 150px;border-radius: 150px;
+            top:0;left: 0;transform: translate(-50%,-50%);
+        }
+        .right-bottom{
+            position: absolute;border: 1px solid yellow;background:yellow;
+            display: block;width: 150px;height: 150px;border-radius: 150px;
+            bottom: 0;right:0;transform: translate(50%,50%);
+        }
+    </style>
+</head>
+<body>
+        <div class="main">
+    	    <div class="left-top">
+    	    </div>
+    	    <div class="right-bottom">
+    	    </div>
+        </div>
+</body>
+</html>

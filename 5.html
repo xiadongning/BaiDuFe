@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            display: block;
+            margin:0;
+            font-family: 黑体;
+            background-color:rgb(184, 181, 181);
+        }
+        img{
+            width: 30px;
+            height: 30px;
+            margin: 10px;
+        }
+        .one{
+            background:pink;
+            height: 50px;
+            display:block;
+        }
+        .right{
+            float:right;
+        }
+        .right li{
+            float:left;
+        }
+        .two,.three,.four,.five,.six{
+            border:30px solid rgb(184, 181, 181);
+            padding:20px;
+            background-color: white;
+        }
+        .two{
+            float: left;
+            width: 70%;
+            box-sizing: border-box;
+        }
+        h3,h5{
+            color: grey;
+        }
+        .three{
+            float: right;
+            width:30%;
+            box-sizing:border-box;
+            }
+        .submit{
+       background:blue;
+       border-radius: 10px;
+       width: 300px;
+       height:40px;
+       text-align: center;
+    }
+    .four,.five,.six{
+        width: 70%;
+        box-sizing: border-box;
+    }
+    .picture{
+        width: 250px;
+        text-align: center;
+    }
+    .t1{
+        background: grey;
+        table-layout: fixed;
+    }
+    .t2{
+        background-color: cyan;
+    }
+    table{
+        width:700px;
+    }
+    </style>
+</head>
+<body>
+    <div class="one">
+        <img src="C:\Users\xia dong ling\Desktop\练习\1.png" alt="">
+        <ul class="right">
+            <li><a href="#">导航链接一</a>&nbsp;&nbsp;&nbsp;</li>
+            <li><a href="#">导航链接二</a>&nbsp;&nbsp;&nbsp;</li>
+            <li><a href="#">导航链接三</a>&nbsp;&nbsp;&nbsp;</li>
+            <li><a href="#">导航链接四</a>&nbsp;&nbsp;&nbsp;</li>
+        </ul>
+    </div>
+    <div class="two">
+        <h2>文章一级标题</h2>
+        <h3>文章二级标题</h3>
+        <h5>文章作者 文章发表时间</h5>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落,换行了<br>
+            这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，换行了<br>
+            这是一个很长很长的段落，这是一个很长很长的段落，<a href="http://life.baidu.com">这里有一个链接链接到http://life.baidu.com</a>这是一个很长很长的段落，这是一个很长很长的段落，<b>这里有个粗体字</b>这是一个很长很长的段<br>
+            落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，
+            </p>
+            <img src="D:\迅雷下载\qi.jpg" style="width:300px;height:300px">
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落,换行了<br>
+        这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，换行了<br>
+        这是一个很长很长的段落，这是一个很长很长的段落，<a href="http://life.baidu.com">这里有一个链接链接到http://life.baidu.com</a>这是一个很长很长的段落，这是一个很长很长的段落，<b>这里有个粗体字</b>这是一个很长很长的段<br>
+        落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，
+        </p>
+        
+    </div>
+    <div class="three">
+            <h2>这里以后是一个侧栏，这是侧栏的标题</h2>
+            <div class="text" style="width: 400px; margin: 0 auto; text-align: left;">
+            <p>请输入邮箱地址：
+                <input type="text" value="这个一个文本输入框"></p>
+                <p style="color:grey">邮箱地址请按要求格式输入</p>
+                <p>请输入密码：
+                    <input type="text" value="这个一个文本输入框">
+                   <br><br> 请重复输入密码：
+                    <input type="text" value="这个一个文本输入框"></p>
+                    <p>密码请为6-16位英文数字</p>
+                    性别：<input type="radio" id="man"/><label for="man">男</label>
+                    <input type="radio" id="woman"/><label for="woman">女</label><br>
+                   <br> 城市：<select for="x">
+                            <option id="x">北京</option>
+                            <option id="x">上海</option>
+                            <option id="x">广州</option>
+        
+                    </select><br>
+                    爱好：
+                    <input type="checkbox" name="love" id="sport"/>
+                    <label for="sport">运动</label>
+                    <input type="checkbox" name="love" id="art"/>
+                    <label for="art">艺术</label>
+                    <input type="checkbox" name="love" id="science"/>
+                    <label for="science">科学</label> <br>
+                    个人描述：
+                    <textarea name=" " id=" " cols="30" rows="4">这是一个多行输入框，输入您的个人描述</textarea><br>
+                </div>
+                    <input class="submit" type="button" value="确认提交" />
+    </div>
+    <div class="four">
+            <h2>另一篇文章一级标题</h2>
+            <h3>文章二级标题</h3>
+            <p>文章作者 文章发表时间</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落,换行了<br>
+                这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，换行了<br>
+                这是一个很长很长的段落，这是一个很长很长的段落，<a href="http://life.baidu.com">这里有一个链接链接到http://life.baidu.com</a>这是一个很长很长的段落，这是一个很长很长的段落，<b>这里有个粗体字</b>这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，
+                </p>
+                <img src="D:\迅雷下载\qi.jpg" style="width:300px;height:300px">
+                <ul>
+                    <li class="none">列表项目一</li>
+                    <li class="none">列表项目二</li>
+                    <li class="none">列表项目三</li>
+                </ul>
+    </div>
+    <div class="five">
+            <h3 style="color:black">图片</h3>
+            <blockquote>
+                <div style="border:1px solid grey;float:left" class="picture">
+                    <p>好看的图片</p>
+                    <img src="D:\迅雷下载\qi.jpg" style="width:200px;height:200px">
+                </div>
+            </blockquote>
+            <blockquote>
+                    <div style="border:1px solid grey;float:right;" class="picture">
+                        <p>好看的图片</p>
+                        <img src="D:\迅雷下载\qi.jpg" style="width:200px;height:200px">
+                    </div>
+                </blockquote>
+                <blockquote>
+                    <div style="border:1px solid grey;float:right;" class="picture">
+                        <p>好看的图片</p>
+                            <img src="D:\迅雷下载\qi.jpg" style="width:200px;height:200px">
+                        </div>
+                </blockquote>
+                <blockquote>
+                    <div style="border:1px solid grey" class="picture">
+                        <p>好看的图片</p>
+                        <img src="D:\迅雷下载\qi.jpg" style="width:200px;height:200px">
+                    </div>
+                </blockquote>
+                <blockquote>
+                    <div style="border:1px solid grey" class="picture">
+                        <p>好看的图片</p>
+                        <img src="D:\迅雷下载\qi.jpg" style="width:200px;height:200px">
+                    </div>
+                </blockquote>
+                <blockquote>
+                    <div style="border:1px solid grey" class="picture">
+                        <p>好看的图片</p>
+                        <img src="D:\迅雷下载\qi.jpg" style="width:200px;height:200px">
+                    </div>
+                </blockquote>
+                <blockquote>
+                    <div style="border:1px solid grey" class="picture">
+                        <p>好看的图片</p>
+                        <img src="D:\迅雷下载\qi.jpg" style="width:200px;height:200px">
+                    </div>
+                </blockquote>
+                <blockquote>
+                    <div style="border:1px solid grey" class="picture">
+                        <p>好看的图片</p>
+                        <img src="D:\迅雷下载\qi.jpg" style="width:200px;height:200px">
+                    </div>
+                </blockquote>
+                <blockquote>
+                    <div style="border:1px solid grey" class="picture">
+                        <p>好看的图片</p>
+                        <img src="D:\迅雷下载\qi.jpg" style="width:200px;height:200px">
+                    </div>
+                </blockquote>
+                <blockquote>
+                    <div style="border:1px solid grey" class="picture">
+                        <p>好看的图片</p>
+                        <img src="D:\迅雷下载\qi.jpg" style="width:200px;height:200px">
+                    </div>
+                </blockquote>
+                <blockquote>
+                    <div style="border:1px solid grey" class="picture">
+                        <p>好看的图片</p>
+                        <img src="D:\迅雷下载\qi.jpg" style="width:200px;height:200px">
+                    </div>
+                </blockquote>
+    </div>
+    <div class="six">
+            <h2>最后一篇文章一级标题</h2>
+            <h3>文章二级标题</h3>
+            <p style="color:grey">文章作者 文章发表时间</p>
+            <ol>
+                    <li>排名1</li>
+                    <li>排名2</li>
+                    <li>排名3</li>
+            </ol>
+            <p>下面是一个表格，给表格加了一个border="1"好让你看出是一个表格</p>
+    <table>
+        <tr class="t1"><th>表头</th><th>表头</th><th>表头</th></tr>
+        <tr><td>表内容单元格</td><td>表内容单元格</td><td><a href="#">操作</a></td></tr>
+        <tr><td>表内容单元格</td><td>表内容单元格</td><td><a href="#">操作</a></td></tr>
+        <tr><td>表内容单元格</td><td>表内容单元格</td><td><a href="#">操作</a></td></tr>
+        <tr><td>表内容单元格</td><td>表内容单元格</td><td><a href="#">操作</a></td></tr>
+        <tr class="t2"><td>总计</td><td colspan="2">1000</td></tr>
+    </table>
+    </div>
+</body>
+</html>
